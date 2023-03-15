@@ -76,7 +76,8 @@
         //控制音乐切换播放暂停 
         var img_music=document.getElementById('img_music');
         var timeout_music;
-        function music_switch(){ //切换   
+        function music_switch(){
+          event.stopPropagation() //切换   
             clearTimeout(timeout_music);  
             if(audio_music.paused){
                 console.log('switch music to play');
