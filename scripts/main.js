@@ -49,8 +49,8 @@
 
 
   let texts = [
-    // 'HELLO',
-    // 'I MISS YOU',
+    'HELLO',
+    'I MISS YOU',
   ]
 
   let canvas,
