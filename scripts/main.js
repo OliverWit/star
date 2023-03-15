@@ -48,10 +48,10 @@
   }, 500);
 
 
-  // let texts = [
-  //   'HELLO',
-  //   'I MISS YOU',
-  // ]
+  let texts = [
+    'HELLO',
+    'I MISS YOU',
+  ]
 
   let canvas,
     ctx,
