@@ -164,7 +164,7 @@
   }
 
   function event() {
-    $(".content").addEventListener(
+    document.querySelector(".content").addEventListener(
       'click',
       function (e) {
         textIndex++
@@ -178,7 +178,7 @@
       false
     )
 
-     $(".content").addEventListener(
+     document.querySelector(".content").addEventListener(
       'touchstart',
       function (e) {
         textIndex++
