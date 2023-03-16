@@ -49,8 +49,11 @@
 
 
   let texts = [
-    'HELLO',
-    'I MISS YOU',
+    '春来夏往',
+    '秋收冬藏',
+    '我们来日方长',
+    
+
   ]
 
   let canvas,
