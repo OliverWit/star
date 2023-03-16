@@ -51,9 +51,8 @@
   let texts = [
     '春来夏往',
     '秋收冬藏',
-    '我们来日方长',
-    
-
+    '未来可期',
+    '来日方长',
   ]
 
   let canvas,
@@ -181,19 +180,19 @@
       false
     )
 
-     document.querySelector(".content").addEventListener(
-      'touchstart',
-      function (e) {
-        textIndex++
-        if (textIndex >= texts.length) {
-          textIndex--
-          return
-        }
-        text = texts[textIndex]
-        console.log(textIndex)
-      },
-      false
-    )
+    //  document.querySelector(".content").addEventListener(
+    //   'touchstart',
+    //   function (e) {
+    //     textIndex++
+    //     if (textIndex >= texts.length) {
+    //       textIndex--
+    //       return
+    //     }
+    //     text = texts[textIndex]
+    //     console.log(textIndex)
+    //   },
+    //   false
+    // )
   }
 
   function init() {
