@@ -178,7 +178,7 @@
       false
     )
 
-    document.addEventListener(
+     $(".content").addEventListener(
       'touchstart',
       function (e) {
         textIndex++
