@@ -164,7 +164,7 @@
   }
 
   function event() {
-    document.addEventListener(
+    $(".content").addEventListener(
       'click',
       function (e) {
         textIndex++
