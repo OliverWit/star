@@ -37,8 +37,8 @@
  
   var together = new Date();
   together.setFullYear(2023, 01, 24);
-  together.setHours(12);
-  together.setMinutes(0);
+  together.setHours(23);
+  together.setMinutes(16);
   together.setSeconds(0);
   together.setMilliseconds(0);
 
