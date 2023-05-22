@@ -1,4 +1,4 @@
-;(function (window) {
+(function (window) {
   window.requestAnimationFrame =
     window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
@@ -12,7 +12,7 @@
   const CANVASHEIGHT = 150
   const CANVASID = 'canvas'
 
-  function timeElapse(date){
+  function timeElapse (date) {
     var current = Date();
     var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
     var days = Math.floor(seconds / (3600 * 24));
@@ -30,11 +30,11 @@
     if (seconds < 10) {
       seconds = "0" + seconds;
     }
-    var result = "第 <span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 小时 <span class=\"digit\">" + minutes + "</span> 分钟 <span class=\"digit\">" + seconds + "</span> 秒"; 
-    document.getElementById("elapseClock").innerHTML=result
+    var result = "第 <span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 小时 <span class=\"digit\">" + minutes + "</span> 分钟 <span class=\"digit\">" + seconds + "</span> 秒";
+    document.getElementById("elapseClock").innerHTML = result
   }
-  
- 
+
+
   var together = new Date();
   together.setFullYear(2023, 01, 24);
   together.setHours(23);
@@ -60,10 +60,10 @@
     particles = [],
     quiver = true,
     text = texts[0],
-    textIndex = 0, 
+    textIndex = 0,
     textSize = 50
 
-  function draw() {
+  function draw () {
     ctx.clearRect(0, 0, CANVASWIDTH, CANVASHEIGHT)
     ctx.fillStyle = 'rgb(255, 255, 255)'
     ctx.textBaseline = 'middle'
@@ -90,7 +90,7 @@
     window.requestAnimationFrame(draw)
   }
 
-  function particleText(imgData) {
+  function particleText (imgData) {
     // 点坐标获取
     var pxls = []
     for (var w = CANVASWIDTH; w > 0; w -= 3) {
@@ -130,7 +130,7 @@
         p.inText = true
         p.fadeIn()
         p.draw(ctx)
-      } catch (e) {}
+      } catch (e) { }
     }
     for (var i = 0; i < particles.length; i++) {
       var p = particles[i]
@@ -154,7 +154,7 @@
     }
   }
 
-  function setDimensions() {
+  function setDimensions () {
     canvas.width = CANVASWIDTH
     canvas.height = CANVASHEIGHT
     canvas.style.position = 'absolute'
@@ -165,7 +165,7 @@
     canvas.style.marginTop = window.innerHeight * 0.15 + 'px'
   }
 
-  function event() {
+  function event () {
     document.querySelector(".content").addEventListener(
       'click',
       function (e) {
@@ -195,7 +195,7 @@
     // )
   }
 
-  function init() {
+  function init () {
     canvas = document.getElementById(CANVASID)
     if (canvas === null || !canvas.getContext) {
       return
@@ -239,7 +239,7 @@
       this.fadingOut = true
       this.fadingIn = true
     }
-    fadeIn() {
+    fadeIn () {
       this.fadingIn = this.opacity > this.opacityTresh ? false : true
       if (this.fadingIn) {
         this.opacity += this.fadeInRate
@@ -247,7 +247,7 @@
         this.opacity = 1
       }
     }
-    fadeOut() {
+    fadeOut () {
       this.fadingOut = this.opacity < 0 ? false : true
       if (this.fadingOut) {
         this.opacity -= this.fadeOutRate
@@ -258,7 +258,7 @@
         this.opacity = 0
       }
     }
-    draw(ctx) {
+    draw (ctx) {
       ctx.fillStyle = 'rgba(226,225,142, ' + this.opacity + ')'
       ctx.beginPath()
       ctx.arc(this.x, this.y, this.size, 0, RADIUS, true)
